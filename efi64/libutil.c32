@@ -1,1 +1,1 @@
-../../syslinux/efi64/com32/libutil/libutil.c32
+../syslinux/efi64/com32/libutil/libutil.c32
