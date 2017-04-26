@@ -1,11 +1,12 @@
 default menu.c32
 prompt 0
-timeout 10
+timeout 100
 ontimeout local
 
 label local
-	menu label boot local hdd
-	localboot 0
+	menu label MBR
+	kernel chain.c32
+	append hd0 0
 
 menu begin Ubuntu
 	include pxelinux.cfg/ubuntu.cfg
@@ -18,3 +19,8 @@ menu end
 menu begin CentOS
 	include pxelinux.cfg/centos.cfg
 menu end
+
+label hdd
+	menu label HDD Tool
+	kernel memdisk
+	initrd ../tools/dft.img

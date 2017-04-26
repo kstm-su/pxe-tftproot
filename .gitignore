@@ -3,6 +3,7 @@
 /debian
 /ubuntu
 /centos
+/tools
 
 /pxelinux.cfg/*
 !/pxelinux.cfg/default
