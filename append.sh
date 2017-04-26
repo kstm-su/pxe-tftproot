@@ -22,7 +22,7 @@ case $DIST in
 label $VERSION-$ARCH
 	menu label Debian $VERSION ($ARCH)
 	kernel ../$DIST/$VERSION/$ARCH/linux
-	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
+	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz
 EOF
 	;;
 
@@ -37,7 +37,7 @@ EOF
 label $VERSION-$ARCH
 	menu label Ubuntu $VERSION ($ARCH)
 	kernel ../$DIST/$VERSION/$ARCH/linux
-	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
+	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz
 EOF
 	;;
 
@@ -49,7 +49,7 @@ EOF
 label $VERSION-$ARCH
 	menu label CentOS $VERSION ($ARCH)
 	kernel ../$DIST/$VERSION/$ARCH/vmlinuz
-	append initrd=../$DIST/$VERSION/$ARCH/initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20$ARCH quiet
+	append initrd=../$DIST/$VERSION/$ARCH/initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20$ARCH text
 EOF
 	;;
 esac
