@@ -6,6 +6,3 @@
 
 /pxelinux.cfg/*
 !/pxelinux.cfg/default
-!/pxelinux.cfg/debian.cfg
-!/pxelinux.cfg/ubuntu.cfg
-!/pxelinux.cfg/centos.cfg
