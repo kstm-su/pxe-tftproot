@@ -1,0 +1,13 @@
+default menu.c32
+
+menu begin Ubuntu
+	include pxelinux.cfg/ubuntu.cfg
+menu end
+
+menu begin Debian
+	include pxelinux.cfg/debian.cfg
+menu end
+
+menu begin CentOS
+	include pxelinux.cfg/centos.cfg
+menu end
