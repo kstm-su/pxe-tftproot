@@ -6,3 +6,6 @@ grep -v '^$' dists.txt | awk '$0="pxelinux.cfg/"$1".cfg"' | sort | uniq | xargs 
 cat dists.txt | while read line; do ./append.sh $line; done
 mkdir tools
 wget http://www.hgst.com/sites/default/files/downloads/dft32_v416_b00_install.IMG -O tools/dft.img
+wget http://www.memtest.org/download/5.01/memtest86+-5.01.bin.gz -O tmp/memtest.bin.gz
+gunzip tmp/memtest.bin.gz
+mv tmp/memtest.bin tools/memtest.bin
