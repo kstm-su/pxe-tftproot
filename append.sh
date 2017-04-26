@@ -1,8 +1,13 @@
 #!/bin/bash
 
-DIST=${1:-'debian'}
-VERSION=${2:-'jessie'}
-ARCH=${3:-'amd64'}
+DIST=$1
+VERSION=$2
+ARCH=$3
+
+if [ -z "$DIST" -o -z "$VERSION" -o -z "$ARCH" ]; then
+	echo 'usage: ./append.sh <dist> <version> <arch>' >&2
+	exit 1
+fi
 
 rm -rf "$DIST/$VERSION/$ARCH"
 case $DIST in
