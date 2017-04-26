@@ -30,7 +30,15 @@ menu begin Tools
 		kernel memdisk
 		initrd ../tools/dft.img
 
-	 LABEL hdt
+	 label hdt
 		 MENU LABEL Hardware Info
-		 COM32 hdt.c32
+		 com32 hdt.c32
+
+	 label reboot
+		 menu label Reboot
+		 com32 reboot.c32
+	 
+	 label poweroff
+		 menu label Power Off
+		 com32 poweroff.c32
 menu end
