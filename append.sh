@@ -21,8 +21,8 @@ case $DIST in
 	cat <<EOF > "pxelinux.cfg/$DIST-$VERSION-$ARCH.cfg"
 label $VERSION-$ARCH
 	menu label Debian $VERSION ($ARCH)
-	kernel ../../$DIST/$VERSION/$ARCH/linux
-	append vga=788 initrd=../../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
+	kernel ../$DIST/$VERSION/$ARCH/linux
+	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
 EOF
 	;;
 
@@ -36,8 +36,8 @@ EOF
 	cat <<EOF > "pxelinux.cfg/$DIST-$VERSION-$ARCH.cfg"
 label $VERSION-$ARCH
 	menu label Ubuntu $VERSION ($ARCH)
-	kernel ../../$DIST/$VERSION/$ARCH/linux
-	append vga=788 initrd=../../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
+	kernel ../$DIST/$VERSION/$ARCH/linux
+	append vga=788 initrd=../$DIST/$VERSION/$ARCH/initrd.gz --- quiet
 EOF
 	;;
 
@@ -48,8 +48,8 @@ EOF
 	cat <<EOF > "pxelinux.cfg/$DIST-$VERSION-$ARCH.cfg"
 label $VERSION-$ARCH
 	menu label CentOS $VERSION ($ARCH)
-	kernel ../../$DIST/$VERSION/$ARCH/vmlinuz
-	append initrd=../../$DIST/$VERSION/$ARCH/initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20$ARCH quiet
+	kernel ../$DIST/$VERSION/$ARCH/vmlinuz
+	append initrd=../$DIST/$VERSION/$ARCH/initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20$ARCH quiet
 EOF
 	;;
 esac
