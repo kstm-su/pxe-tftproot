@@ -49,7 +49,7 @@ EOF
 label $VERSION-$ARCH
 	menu label CentOS $VERSION ($ARCH)
 	kernel ../$DIST/$VERSION/$ARCH/vmlinuz
-	append initrd=../$DIST/$VERSION/$ARCH/initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20$ARCH text
+	append ks initrd=../$DIST/$VERSION/$ARCH/initrd.img ramdisk_size=100000 ksdevice=eth1 ip=dhcp url --url http://mirror.centos.org/$DIST/$VERSION/os/$ARCH/
 EOF
 	;;
 esac
