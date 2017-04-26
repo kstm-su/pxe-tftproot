@@ -20,7 +20,13 @@ menu begin CentOS
 	include pxelinux.cfg/centos.cfg
 menu end
 
-label hdd
-	menu label HDD Tool
-	kernel memdisk
-	initrd ../tools/dft.img
+menu begin Tools
+	label memtest
+		menu label Memtest86+
+		linux ../tools/memtest.bin
+
+	label hdd
+		menu label HDD Tool
+		kernel memdisk
+		initrd ../tools/dft.img
+menu end
