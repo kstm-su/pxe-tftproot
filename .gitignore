@@ -1,0 +1,7 @@
+/syslinux
+/debian
+/ubuntu
+/centos
+
+/pxelinux.cfg/*
+!/pxelinux.cfg/default
