@@ -29,4 +29,8 @@ menu begin Tools
 		menu label HDD Tool
 		kernel memdisk
 		initrd ../tools/dft.img
+
+	 LABEL hdt
+		 MENU LABEL Hardware Info
+		 COM32 hdt.c32
 menu end
